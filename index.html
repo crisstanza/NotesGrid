@@ -1,118 +1,195 @@
 <style>
 	* {
 		font-family: Arial;
-		font-size: 12pt;
+		font-size: 18pt;
+		color: #7f7fff;
+	}
+	body {
+		display: flex;
+		gap: 15px;
+		flex-wrap: wrap;
+	}
+	h1 { margin: 0 0 10px 0; }
+	body > * {
+		flex: 100%;
 	}
 	table { margin: auto; }
 	div { text-align: center; }
 	td {
 		text-align: center;
 		vertical-align: middle;
-		width: 38px;
-		height: 38px;
+		width: 48px;
+		height: 50px;
 	}
-	table.notes td { border: 1px solid gray; }
-	table.chord td { color: gray; border: 1px solid lightgray; }
-	table.notes td.accident { background-color: #E0E0E0; }
-	table.chord td.root { width: 34px; border: 3px solid gray; }
+	table.notes td { border: 1px solid gray; font-size: 20pt; }
+	table.chord td { color: #DDD; border: 1px solid lightgray; }
+	table.notes td.accident { color: #ff7f7f; background-color: #E0E0E0; }
+	table.chord td.root { border: 1px solid black; }
+	table.triad td.root-text { font-weight: bold; }
 </style>
-<br />
-<br />
-<table class="notes">
-	<tr>
-		<td>C</td>
-		<td class="accident">C#</td>
-		<td>D</td>
-		<td class="accident">D#</td>
-		<td>E</td>
-		<td>F</td>
-		<td class="accident">F#</td>
-		<td>G</td>
-		<td class="accident">G#</td>
-		<td>A</td>
-		<td class="accident">A#</td>
-		<td>B</td>
-		<td>C</td>
-		<td class="accident">C#</td>
-		<td>D</td>
-		<td class="accident">D#</td>
-		<td>E</td>
-		<td>F</td>
-		<td class="accident">F#</td>
-		<td>G</td>
-		<td class="accident">G#</td>
-		<td>A</td>
-		<td class="accident">A#</td>
-		<td>B</td>
-		<td>C</td>
-	</tr>
-</table>
-<br />
-<br />
-<br />
-<br />
-<table class="notes">
-	<tr>
-		<td>C</td>
-		<td class="accident">Db</td>
-		<td>D</td>
-		<td class="accident">Eb</td>
-		<td>E</td>
-		<td>F</td>
-		<td class="accident">Gb</td>
-		<td>G</td>
-		<td class="accident">Ab</td>
-		<td>A</td>
-		<td class="accident">Bb</td>
-		<td>B</td>
-		<td>C</td>
-		<td class="accident">Db</td>
-		<td>D</td>
-		<td class="accident">Eb</td>
-		<td>E</td>
-		<td>F</td>
-		<td class="accident">Gb</td>
-		<td>G</td>
-		<td class="accident">Ab</td>
-		<td>A</td>
-		<td class="accident">Bb</td>
-		<td>B</td>
-		<td>C</td>
-	</tr>
-</table>
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<div>Maior</div>
-<table class="chord">
-	<tr>
-		<td class="root">x</td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td>x</td>
-		<td></td>
-		<td></td>
-		<td>x</td>
-	</tr>
-</table>
-<br />
-<br />
-<br />
-<br />
-<div>Menor</div>
-<table class="chord">
-	<tr>
-		<td class="root">x</td>
-		<td></td>
-		<td></td>
-		<td>x</td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td>x</td>
-	</tr>
-</table>
+
+<div>
+	<h1>Maior (M)</h1>
+	<table class="chord">
+		<tr>
+			<td class="root">x</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+			<td>x</td>
+		</tr>
+	</table>
+	<table class="triad">
+		<tr>
+			<td class="root-text">1</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>3</td>
+			<td></td>
+			<td></td>
+			<td>5</td>
+		</tr>
+	</table>
+</div>
+
+<div>
+	<h1>Menor (m)</h1>
+	<table class="chord">
+		<tr>
+			<td class="root">x</td>
+			<td></td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>x</td>
+		</tr>
+	</table>
+	<table class="triad">
+		<tr>
+			<td class="root-text">1</td>
+			<td></td>
+			<td></td>
+			<td>3</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>5</td>
+		</tr>
+	</table>
+</div>
+
+<div>
+	<h1>Diminuto (dim)</h1>
+	<table class="chord">
+		<tr>
+			<td class="root">x</td>
+			<td></td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+			<td>x</td>
+		</tr>
+	</table>
+	<table class="triad">
+		<tr>
+			<td class="root-text">1</td>
+			<td></td>
+			<td></td>
+			<td>3</td>
+			<td></td>
+			<td></td>
+			<td>5</td>
+		</tr>
+	</table>
+</div>
+
+<div>
+	<h1>Aumentado (aug)</h1>
+	<table class="chord">
+		<tr>
+			<td class="root">x</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>x</td>
+		</tr>
+	</table>
+	<table class="triad">
+		<tr>
+			<td class="root-text">1</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>3</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>5</td>
+		</tr>
+	</table>
+</div>
+
+<div>
+	<table class="notes">
+		<tr>
+			<td>C</td>
+			<td class="accident">C#</td>
+			<td>D</td>
+			<td class="accident">D#</td>
+			<td>E</td>
+			<td>F</td>
+			<td class="accident">F#</td>
+			<td>G</td>
+			<td class="accident">G#</td>
+			<td>A</td>
+			<td class="accident">A#</td>
+			<td>B</td>
+			<td>C</td>
+			<td class="accident">C#</td>
+			<td>D</td>
+			<td class="accident">D#</td>
+			<td>E</td>
+			<td>F</td>
+			<td class="accident">F#</td>
+			<td>G</td>
+		</tr>
+	</table>
+</div>
+
+<div>
+	<table class="notes">
+		<tr>
+			<td>C</td>
+			<td class="accident">Db</td>
+			<td>D</td>
+			<td class="accident">Eb</td>
+			<td>E</td>
+			<td>F</td>
+			<td class="accident">Gb</td>
+			<td>G</td>
+			<td class="accident">Ab</td>
+			<td>A</td>
+			<td class="accident">Bb</td>
+			<td>B</td>
+			<td>C</td>
+			<td class="accident">Db</td>
+			<td>D</td>
+			<td class="accident">Eb</td>
+			<td>E</td>
+			<td>F</td>
+			<td class="accident">Gb</td>
+			<td>G</td>
+		</tr>
+	</table>
+</div>
